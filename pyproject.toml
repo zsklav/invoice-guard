@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "invoice-guard"
+version = "0.1.0"
+description = "A deterministic validation and anomaly gate for invoice data, with a pluggable AI-advisor seam."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+keywords = ["invoice", "validation", "anomaly-detection", "decimal", "audit", "fintech"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Topic :: Office/Business :: Financial",
+  "Intended Audience :: Developers",
+]
+dependencies = []  # standard library only — by design
+
+[project.urls]
+Source = "https://github.com/zsklav/invoice-guard"
+
+[project.scripts]
+invoice-guard = "invoice_guard.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
